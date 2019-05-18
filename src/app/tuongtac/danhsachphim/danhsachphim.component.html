@@ -1,0 +1,10 @@
+<div class="container">
+  <h3>Danh Sach Phim</h3>
+  <div class="row">
+    <div class="col-md-4" *ngFor="let phim of mangPhim">
+      <app-phim [inputPhim]="phim">
+
+      </app-phim>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,12 @@
+<div class="container">
+  <h2>Register Form</h2>
+  <h3>Email</h3>
+  <input [(ngModel)]="email" class="form-control" #inputEmail style="width: 30%"  placeholder="Dung ngModel">
+  <h3>FullName</h3>
+  <input class="form-control "  #inputFullname input2="ip2" style="width: 30%" placeholder="Enter Full Name"><br>
+
+  <button (click)="Submit(inputFullname)"  class="btn btn-success mt-4">Submit</button>
+
+  <h3>Email</h3> <p id="theP2">{{dungNgModel}}</p>
+  <h3>Full name</h3> <p id="theP2">{{dungEvent}}</p>
+</div>

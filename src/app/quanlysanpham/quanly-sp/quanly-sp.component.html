@@ -1,0 +1,47 @@
+<div class="container-fluid">
+  <div class="card">
+    <div class="card-header bg-dark text-white">QUẢN LÝ SẢN PHẨM</div>
+    <div class="card-body">
+      <h5>Mã SP</h5>
+      <input #Ma id="maid" type="text" placeholder="Mã sản phẩm">
+      <h5>Tên SP</h5>
+      <input #Ten  id="tenid" type="text" placeholder="Tên sản phẩm">
+      <h5>Giá</h5>
+      <input #Gia id="giaid" type="text" placeholder="10000"> <br>
+      <button class="btn btn-danger mt-4" (click)="AddSP(Ma.value, Ten.value, Gia.value)">Thêm Mới</button>
+    </div>
+  </div>
+  <!-- End_card -->
+  <div class="card">
+    <table class="table">
+      <thead>
+        <tr class="card-header bg-dark text-white">
+          <th>So TT</th>
+          <th>Mã SP</th>
+          <th>Tên SP</th>
+          <th>Giá</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="text-dark" [ngClass]="{'bg-success':STT%2==!0}"
+          *ngFor="let SP of DSSP; let STT = index">
+          <td>
+            {{STT+1}}
+          </td>
+          <td>
+            {{SP.MaSP}}
+          </td>
+          <td>
+            {{SP.TenSP}}
+          </td>
+          <td>
+            {{SP.Gia.toLocaleString()}}
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+  <!-- End_card -->
+
+</div>

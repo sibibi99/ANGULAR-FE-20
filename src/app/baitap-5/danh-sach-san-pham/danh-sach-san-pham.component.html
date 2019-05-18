@@ -1,0 +1,63 @@
+<div class="container-fluid">
+    <div class="card">
+      <div class="card-header bg-dark text-white">QUẢN LÝ DANH SÁCH SẢN PHẨM</div>
+      <div class="card-body">
+        <div class="row">
+          <div class="col-md-3">
+            <input #Ma id="maid" type="text" placeholder="Mã SP">
+          </div>
+          <div class="col-md-3">
+            <input #Ten id="tenid" type="text" placeholder="Tên SP">
+          </div>
+          <div class="col-md-3">
+            <input #Gia id="giaid" type="text" placeholder="Gia"> <br>
+          </div>
+          <div class="col-md-3">
+            <button class="btn btn-success " (click)="AddSP(Ma.value, Ten.value, Gia.value)">Thêm Mới</button>
+  
+          </div>
+        </div>
+  
+  
+      </div>
+    </div>
+    <!-- End_card -->
+    <div class="container-fluid">
+      <table class="table">
+
+        <thead>
+          <tr class="card-header bg-dark text-white">
+            <th>STT</th>
+            <th>Mã SP</th>
+            <th>Tên SP</th>
+            <th>Giá</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="text-dark" *ngFor="let SP of mangDSSP  | paginate: { itemsPerPage: 5, currentPage: p }; let vitri = index">
+
+            <td>
+              {{(this.p - 1) * 5 + vitri + 1}}
+            </td>
+            <td>
+              {{SP.MaSP}}
+            </td>
+            <td>
+              {{SP.TenSP}}
+            </td>
+            <td>
+              {{SP.Gia.toLocaleString()}}
+            </td>
+            <td>
+              <div class="btn btn-danger" (click)="xoaSP(vitri)">Xoa</div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <pagination-controls (pageChange)="p = $event"></pagination-controls>
+  
+    </div>
+    <!-- End_card -->
+  
+  </div>

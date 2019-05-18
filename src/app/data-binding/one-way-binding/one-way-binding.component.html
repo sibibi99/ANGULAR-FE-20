@@ -1,0 +1,8 @@
+<p>
+  {{title}}
+</p>
+<h1></h1>
+<input #obInput value="Nhap vao de doi ten">
+<button (click)="changeName(obInput)">Click</button>
+
+<input [(ngModel)]='title' #doiTen placeholder="Doi ten">

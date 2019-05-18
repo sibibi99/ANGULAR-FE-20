@@ -1,0 +1,31 @@
+<div class="container">
+  <!-- <div class="container">
+  <h1>Duyet Mang Object</h1>
+  <div *ngFor="let item of DSNV">{{item.ten}} : {{item.tuoi}}</div>
+  <h1>Duyet mang thong thuong</h1>
+  <div *ngFor="let item of Colors">{{item}}</div>
+</div> -->
+
+<table class="table">
+    <thead>
+      <tr>
+        <th>So TT</th>
+        <th>Ho Ten</th>
+        <th>Tuoi</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class= "text-white" [ngClass]="{'bg-secondary':STT%2==0, 'bg-primary':!STT%2==0}" *ngFor="let SV of DSSV; let STT = index">
+        <td>
+          {{STT+1}}
+        </td>
+        <td>
+          {{SV.Hoten}}
+        </td>
+        <td>
+          {{SV.Tuoi}}
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

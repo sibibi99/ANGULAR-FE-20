@@ -1,0 +1,15 @@
+<p *ngIf="Status">
+  Helo Word
+</p>
+
+<button (click)="anHien()">Show/Hiden</button>
+
+<div *ngIf="Status; else NoiDungElse">
+  <button (click)="DangXuat()">Dang Xuat</button>
+  <h5>Xin Chao <b>TheWord</b></h5>
+</div>
+
+<ng-template #NoiDungElse>
+  <button (click)="DangNhap()">Dang Nhap</button>
+  <h5>Chua dang nhap</h5>
+</ng-template>
