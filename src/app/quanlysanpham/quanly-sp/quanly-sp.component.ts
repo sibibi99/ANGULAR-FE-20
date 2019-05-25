@@ -17,9 +17,9 @@ export class QuanlySPComponent implements OnInit {
 
 AddSP (m,t,g){
   this.DSSP.push({MaSP: m, TenSP: t, Gia: g});
-  document.getElementById('maid').value = '';
-  document.getElementById('tenid').value = '';
-  document.getElementById('giaid').value = '';
+  // document.getElementById('maid').value = '';
+  // document.getElementById('tenid').value = '';
+  // document.getElementById('giaid').value = '';
 }
 
   constructor() { }

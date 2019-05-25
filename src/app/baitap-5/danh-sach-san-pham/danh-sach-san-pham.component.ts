@@ -24,9 +24,9 @@ export class DanhSachSanPhamComponent implements OnInit {
 
 AddSP (m,t,g){
   this.mangDSSP.push({MaSP: m, TenSP: t, Gia: g});
-  document.getElementById('maid').value = '';
-  document.getElementById('tenid').value = '';
-  document.getElementById('giaid').value = '';
+  // document.getElementById('maid').value = '';
+  // document.getElementById('tenid').value = '';
+  // document.getElementById('giaid').value = '';
 }
 xoaSP (vitri){
   //DuyetTim phan tu do
