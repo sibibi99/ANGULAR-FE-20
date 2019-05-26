@@ -1,0 +1,17 @@
+.itemGhe{
+    cursor: pointer;
+    margin: 15px;
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    background-color: darkgray;
+}
+
+.gheBiDat{
+    background-color: rgb(231, 88, 88) !important;
+    cursor: no-drop;
+}
+
+.gheDangDat{
+    background-color:rgb(122, 241, 158) !important; 
+}

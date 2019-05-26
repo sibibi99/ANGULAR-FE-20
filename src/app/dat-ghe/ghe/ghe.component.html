@@ -1,2 +1,6 @@
-
- <button class="btn bg-dark text-white m-2 btn-lg">{{ghe.SoGhe}}</button>
+<button [disabled]="itemGhe.TrangThai" [ngClass]="
+    {'gheBiDat' :itemGhe.TrangThai,
+    'gheDangDat': dangDat
+}" 
+(click)="datGhe()" class="m-2 p-2  ghe">{{itemGhe.SoGhe}}</button>
+<ng-content></ng-content>

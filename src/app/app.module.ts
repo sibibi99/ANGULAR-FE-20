@@ -18,6 +18,7 @@ import { Baitap5Module } from './baitap-5/baitap-5.module';
 import {NgxPaginationModule} from 'ngx-pagination'; // <-- import the module
 import { TuongtacModule } from './tuongtac/tuongtac.module';
 import { DatGheModule } from './dat-ghe/dat-ghe.module';
+import { BaiTap6Module } from './bai-tap6/bai-tap6.module';
 
 
 
@@ -42,7 +43,7 @@ import { DatGheModule } from './dat-ghe/dat-ghe.module';
     Baitap5Module,
     NgxPaginationModule,
     TuongtacModule,
-    DatGheModule
+    DatGheModule, BaiTap6Module
   ],
   providers: [],
   bootstrap: [AppComponent]

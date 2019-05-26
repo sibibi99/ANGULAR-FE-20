@@ -1,0 +1,21 @@
+<p-panel header="TÌM KIẾM HỌC VIÊN" [toggleable]="true" [style]="{'margin-bottom':'20px'}">
+
+</p-panel>
+<p-panel header="DANH SÁCH HỌC VIÊN" [toggleable]="true" [style]="{'margin-bottom':'20px'}">
+  <p-table [value]="data">
+    <ng-template pTemplate="header">
+        <tr>
+            <th>Mã Học Viên</th>
+            <th>Tên Học Vien</th>
+            <th>Mã Lớp</th>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-data>
+        <tr>
+            <td>{{data.MaHV}}</td>
+            <td>{{data.TenHocVien}}</td>
+            <td>{{data.MaLop}}</td>
+        </tr>
+    </ng-template>
+</p-table>
+</p-panel>
